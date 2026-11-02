@@ -18,7 +18,7 @@ export async function getStudentById(req: Request, res: Response): Promise<void>
     res.status(400).json({ message: 'Student ID must be a positive integer' });
     return;
   }
- 
+
   try {
     const result = await pool.query(
       'SELECT * FROM students WHERE id = $1;',

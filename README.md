@@ -41,3 +41,7 @@ A RESTful backend API built with Node.js, Express, TypeScript, and Supabase Post
    ```
 
 The API runs at `http://localhost:4000` by default.
+
+## Security
+
+Keep `.env` local and never commit database credentials. GitHub and cloud hosting platforms should receive configuration through `.env.example` and environment variables configured privately on the deployment service.
