@@ -7,7 +7,8 @@ export async function getStudents(_req: Request, res: Response): Promise<void> {
       'SELECT * FROM students ORDER BY id;'
     );
     res.json(result.rows);
-  } catch {
+  } catch (error: unknown) {
+    console.error('Could not load students:', error);
     res.status(500).json({ message: 'Could not load students' });
   }
 }
